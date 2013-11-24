@@ -1,0 +1,67 @@
+\documentclass[
+paper=a4,
+titlepage=true,
+fontsize=12pt,
+%twoside=true
+]{scrartcl}
+
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,english]{babel}
+
+
+\usepackage{titlepage}
+\TitlePageStyle{hrule}
+
+
+%%%% Information about the university
+\university{Imaginary University of Examples}
+\faculty{Made up department of Randomness}
+\institute{Institute}
+\chair{Chair}
+
+%%%% Information about the course and lecturer
+\course{Course}
+\professor{\lecturername: Prof. Dr. Max Mustermann} % \lecturername shows lecturer or Dozent
+\titlehead{Titlehead, e.g. additional information}
+
+%%%% Date (today is set under titel automatically!!!) and type of the paper
+\date{Date e.g. winter semester 2013/2014}
+\subject{Subject}% \projectpapername, \seminarpapername, \studentresearchname, \diplomathesisname, \degreethesisname, \masterthesisname, \bachelorthesisname 
+
+
+%%%% title and subtitle of the paper
+\title{Title}
+\subtitle{Subtitle}
+
+
+
+%%%% information about the (first) author
+\author{John F. Doe}
+\discipline{\courseofstudiesname: Discipline} % \courseofstudiesname to set courseofstudies in english or german
+\matriculationnumber{\matriculationnumbername: 123456}% \matriculationnumbername same as \courseofstudiesname
+\semester{19. semesters}
+\email{your@email.com}
+
+%%%% information about the secound author
+\secoundauthor{Lucy Doe}
+\secounddiscipline{\courseofstudiesname: Discipline} % \courseofstudiesname to set courseofstudies in english or german
+\secoundmatriculationnumber{\matriculationnumbername: 123456}% \matriculationnumbername same as \courseofstudiesname
+\secoundsemester{17. semesters}
+\secoundemail{your@email.com}
+
+
+%%%% additional information, needs twoside=true
+%\uppertitleback{uppertitleback}
+%\lowertitleback{lowertitleback}
+%\dedication{dedication}
+%\extratitle{extratitle}
+%%%% 
+
+\begin{document}
+%%%%%%%%% maketitle options
+%%% authoralign={} with \raggedright, \raggedleft, \centering
+\maketitle[]
+
+\end{document}
