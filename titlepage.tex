@@ -59,10 +59,11 @@ fontsize=12pt,
 
 
 \usepackage[
-pdfusetitle,
-pdfcreator={LaTeX with KOMA-Script and hyperref package},
+pdftitle={\csname @title\endcsname\ - \csname @subtitle\endcsname},
+pdfauthor={\csname @author\endcsname},
 pdfsubject={\expandafter\csname @subject\endcsname},
-%pdfkeywords={},
+pdfcreator={LaTeX with KOMA-Script and hyperref package},
+pdfkeywords={},
 %pdfproducer={},
 ]{hyperref}
 
