@@ -35,8 +35,6 @@ fontsize=12pt,
 \title{Title}
 \subtitle{Subtitle}
 
-
-
 %%%% information about the (first) author
 \author{John F. Doe}
 \discipline{\courseofstudiesname: Discipline} % \courseofstudiesname to set courseofstudies in english or german
@@ -58,6 +56,16 @@ fontsize=12pt,
 %\dedication{dedication}
 %\extratitle{extratitle}
 %%%% 
+
+
+\usepackage[
+pdfusetitle,
+pdfcreator={LaTeX with KOMA-Script and hyperref package},
+pdfsubject={\expandafter\csname @subject\endcsname},
+%pdfkeywords={},
+%pdfproducer={},
+]{hyperref}
+
 
 \begin{document}
 %%%%%%%%% maketitle options
