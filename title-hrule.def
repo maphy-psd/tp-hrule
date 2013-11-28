@@ -120,9 +120,12 @@
         \begin{flushleft}	
          		\@university\\
          		\@faculty\\
-         		\ifx\@chair\@empty \@institute\\[2em] \else \@institute\\ \@chair\\[2em]\fi
+         			\ifx\@chair\@empty%
+         		 		\ifx\@institute\@empty\else\@institute\\[1.5em]\fi%
+         			\else
+         				\ifx\@institute\@empty\else\@institute\\\fi \@chair\\[1.5em]\fi
          		\ifx\@course\@empty\else\@course\\\fi
-         		\@professor\\
+         		\ifx\@professor\@empty\else\@professor\\\fi
         		\ifx\@titlehead\@empty\else\@titlehead\fi
         \end{flushleft}
     \end{minipage}
@@ -153,8 +156,8 @@
 \begin{minipage}[t]{0.5\textwidth} 
 		\@authoralign
 		\@author\par	
-		\ifx\@discipline\@empty\else\@discipline\\\fi
- 		\ifx\@semester\@empty\else\@semester\\\fi
+		\ifx\@discipline\@empty\else\@discipline\fi\\
+ 		\ifx\@semester\@empty\else\@semester\fi\\
 		\@matriculationnumber\\
 		\ifx\@email\@empty\else\texttt{\@email}\fi	     
 \end{minipage}
@@ -223,6 +226,36 @@
 \renewcommand*{\makeposttitleback}{%
   \ifx\@dedication\@empty\else\begin{titlepage}\null\end{titlepage}\fi
 }
+
+
+
+
+%\university{}
+%\faculty{}
+%\institute{}
+%\chair{}
+%\course{}
+%\professor{}
+%\titlehead{}
+%\date{}
+%\subject{}
+%\title{}
+%\subtitle{}
+%\author{}
+%\discipline{}
+%\matriculationnumber{}
+%\semester{}
+%\email{}
+%\secoundauthor{}
+%\secounddiscipline{}
+%\secoundmatriculationnumber{}
+%\secoundsemester{}
+%\secoundemail{}
+%\uppertitleback{}
+%\lowertitleback{}
+%\dedication{}
+%\extratitle{}
+
 \endinput
 %%
-%% End of file `title-KOMAScript.def'.
+%% End of file `title-hrule.def'.
