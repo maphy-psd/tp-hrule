@@ -226,6 +226,18 @@
 \renewcommand*{\makeposttitleback}{%
   \ifx\@dedication\@empty\else\begin{titlepage}\null\end{titlepage}\fi
 }
+
+\AtBeginDocument{
+	\hypersetup{
+		pdftitle={\csname @title\endcsname\ - \ifx\csname @subtitle\endcsname\relax\else\csname @subtitle\endcsname\fi},
+		pdfauthor={\csname @author\endcsname},
+		pdfsubject={\csname @subject\endcsname},
+		%pdfcreator={LaTeX with KOMA-Script and hyperref package},
+		%pdfkeywords={},
+		%pdfproducer={},
+	}
+}
+
 \endinput
 %%
 %% End of file `title-hrule.def'.

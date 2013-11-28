@@ -10,10 +10,15 @@ fontsize=12pt,
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman,english]{babel}
 
+%pdftitle, pdfauthor, pdfsubject are set automatically by \TitlePageStyle{hrule}
+\usepackage[
+pdfkeywords={},
+%pdfproducer={},
+]{hyperref}
+
 
 \usepackage{titlepage}
 \TitlePageStyle{hrule}
-
 
 %%%% Information about the university
 \university{Imaginary University of Examples}
@@ -56,17 +61,6 @@ fontsize=12pt,
 %\dedication{dedication}
 %\extratitle{extratitle}
 %%%% 
-
-
-\usepackage[
-pdftitle={\csname @title \endcsname\ - \csname @subtitle \endcsname},
-pdfauthor={\csname @author \endcsname},
-pdfsubject={\csname @subject \endcsname},
-pdfcreator={LaTeX with KOMA-Script and hyperref package},
-pdfkeywords={},
-%pdfproducer={},
-]{hyperref}
-
 
 \begin{document}
 %%%%%%%%% maketitle options
